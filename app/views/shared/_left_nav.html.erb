@@ -1,0 +1,28 @@
+<ul class="list-group">
+  <li class="list-group-item">
+    <%= content_tag :strong, current_user.name %>
+  </li>
+  <li class="list-group-item">
+    <%= content_tag :small, '@'+current_user.username %>
+  </li>
+  <li class="list-group-item">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <%= content_tag :h4, 'n' %>
+            <%= content_tag :small, 'Posts', :class => "uppercase lighter" %>
+          </td>
+          <td>
+            <%= content_tag :h4, current_user.follows.count %>
+            <%= content_tag :small, 'Following', :class => "uppercase lighter" %>
+          </td>
+          <td>
+            <%= content_tag :h4, Follow.where(:following_id => current_user.id).count %>
+            <%= content_tag :small, 'Followers', :class => "uppercase lighter" %>
+          </td>
+      </tbody>
+    </table>
+  </li>
+  <li class="list-group-item"><%= link_to "Follow", follows_path %></li>
+</ul>

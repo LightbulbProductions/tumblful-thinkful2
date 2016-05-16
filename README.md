@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-Tumblful
-=============
-This is the sample version of Tumblful, an extension of Tweetful for creating different types of posts, produced for Thinkful's "Essentials of Full Stack Development" course.
 
-Before Beginning
--------------
-
+iahfuiwPIDUUQWPOAIFH
 Ensure you have the latest version of Ruby Version Manager (RVM) and ruby 2.1.5 installed.
 
 ```sh
@@ -61,5 +55,5 @@ Authors
 - http://github.com/SnareChops
 =======
 # tumblful-thinkful
-Thinkful's rails version of tumblr. 
+Thinkful's rails version of tumblr.
 >>>>>>> 8adb7e8d8f55d5fa62543f43aae1831e1e067ba5

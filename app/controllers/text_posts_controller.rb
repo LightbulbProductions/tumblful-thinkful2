@@ -2,8 +2,8 @@ class TextPostsController < ApplicationController
   def index
     @text_posts = TextPost.all
   end
-  
-  
+
+
   def show
     @text_post = TextPost.find(params[:id])
   end
@@ -17,7 +17,7 @@ class TextPostsController < ApplicationController
   end
 
   def create
-    @text_post = TextPost.new(url: params[:text_post][:url], title: params[:text_post][:title])
+    @text_post = TextPost.new(url: params[:text_post][:url], title: params[:text_post][:title], blog: params[:text_post][:text])
     if @text_post.save
       redirect_to text_posts_path
     else
@@ -28,7 +28,7 @@ class TextPostsController < ApplicationController
 
 def update
 @text_post = TextPost.find(params[:id])
-if @text_post.update(link: params[:text_post][:url], title: params[:text_post][:title])
+if @text_post.update(link: params[:text_post][:url], title: params[:text_post][:title], blog: params[:text_post][:text])
   redirect_to text_posts_path
 else
   @errors = @text_post.errors
@@ -43,6 +43,6 @@ redirect_to text_posts_path
 end
 private
   def text_post_params
-    params.require(:text_post).permit(:url, :title)
+    params.require(:text_post).permit(:url, :title, :blog)
   end
 end

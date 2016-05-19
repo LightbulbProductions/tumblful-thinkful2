@@ -1,6 +1,6 @@
 class TextPost < ActiveRecord::Base
-  validates_presence_of :url
-  scope :recent, lambda { order('created_at DESC').limit(5) }
+  validates_presence_of :url, :title, :blog
+  scope :recent, lambda { order('created_at DESC').limit(50) }
 
   belongs_to :user
 

@@ -3,7 +3,7 @@
  <div class="col-sm-12 col-md-10">
   <h2><%= text_post.title %></h2>
   <h5><%= text_post.url %></h5>
-  
+  <h1><%= text_post.blog %></h1>
   <%= form_tag do %>
   Form contents
 <% end %>
@@ -12,7 +12,7 @@
   </span> <br>
   <%= link_to "New Text Post", controller: "text_posts", action: "new" %>
   </div>
-  
+
 <div class="col-sm-12 col-md-2">
    <%= form_for Like.new, :remote => true do |f| %>
     <%= f.hidden_field :likeable_type, :value => text_post.class %>
@@ -22,6 +22,6 @@
   <% end %>
 </div
 <br>
- 
-  <% end %>  
+
+  <% end %>
 <% end %>

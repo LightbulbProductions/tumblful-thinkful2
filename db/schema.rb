@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510163848) do
+ActiveRecord::Schema.define(version: 20160519091439) do
 
   create_table "article_links", force: true do |t|
     t.text     "title"
@@ -148,6 +148,7 @@ ActiveRecord::Schema.define(version: 20160510163848) do
     t.text     "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "blog"
   end
 
   create_table "tweets", force: true do |t|

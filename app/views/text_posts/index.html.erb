@@ -1,27 +1,28 @@
+<h1>Text Here</h1>
 <% @text_posts.each do |text_post| %>
- <%= div_for text_post do %>
- <div class="col-sm-12 col-md-10">
-  <h2><%= text_post.title %></h2>
-  <h5><%= text_post.url %></h5>
-  <h1><%= text_post.blog %></h1>
-  <%= form_tag do %>
-  Form contents
-<% end %>
-  <span class='likes pull-left'>
-  <%= text_post.likes.count %> likes
-  </span> <br>
-  <%= link_to "New Text Post", controller: "text_posts", action: "new" %>
+<%= div_for text_post do %>
+  <div class="col-sm-12 col-md-10">
+    <h2><%= text_post.title %></h2>
+    <h5><%= text_post.url %></h5>
+    <h1><%= text_post.blog %></h1>
+    <%= form_tag do %>
+    <%= link_to "New Text Post", new_text_post_path %>
+    <%= link_to "Edit", edit_text_post_path(text_post) %>
+    <%= link_to "Delete", text_post_path(text_post), method: :delete %>
+    <% end %>
+    <span class='likes pull-left'>
+      <%= text_post.likes.count %> likes
+    </span> <br>
+
   </div>
-
-<div class="col-sm-12 col-md-2">
-   <%= form_for Like.new, :remote => true do |f| %>
-    <%= f.hidden_field :likeable_type, :value => text_post.class %>
-    <%= f.hidden_field :likeable_id, :value => text_post.id %>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.submit "Like", :class=>'btn-primary btn-lg' %>
-  <% end %>
-</div
-<br>
-
-  <% end %>
+<% end %>
+  <div class="col-sm-12 col-md-2">
+    <%= form_for Like.new, :remote => true do |f| %>
+      <%= f.hidden_field :likeable_type, :value => text_post.class %>
+      <%= f.hidden_field :likeable_id, :value => text_post.id %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.submit "Like", :class=>'btn-primary btn-lg' %>
+    <% end %>
+  </div>
+  <br>
 <% end %>

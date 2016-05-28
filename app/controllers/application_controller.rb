@@ -32,5 +32,5 @@ end
 private
 
 def text_post_params
-  params.require(:text_post).permit(:title, :body)
+  params.require(:text_post).permit(:url, :title, :blog, :text)
 end

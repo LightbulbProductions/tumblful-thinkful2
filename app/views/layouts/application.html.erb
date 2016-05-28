@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>TLE and ME</title>
-  
+
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "//fonts.googleapis.com/icon?family=Material+Icons" %>
@@ -36,7 +36,7 @@
             <% end %>
             <li class="<%= 'active' if params[:controller] == 'image_links' %>"><%= link_to "Images", image_links_path %></li>
             <li class="<%= 'active' if params[:controller] == 'text_posts' %>"><%= link_to "Texts", text_posts_path %></li>
-             <li class="<%= 'active' if params[:controller] == 'forums' %>"><%= link_to "Forums", forem.forums_path %><li>
+            <li class="<%= 'active' if params[:controller] == 'forums' %>"><%= link_to "Forums", forem.forums_path %><li>
 
           <% end %>
           </ul>

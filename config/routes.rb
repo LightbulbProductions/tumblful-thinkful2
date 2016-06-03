@@ -10,7 +10,7 @@ Tumblful::Application.routes.draw do
   devise_for :users
 
   authenticated :user do
-    resources :follows, :except => [:new, :edit, :show, :update, :delete]
+    resources :follows, :except => [:new, :edit, :show, :update, :destroy]
     root :to => 'follows#index', :as => :user_root
   end
 

@@ -10,12 +10,11 @@ class TextPostsController < ApplicationController
   end
 
   def create
-    @text_post.user = current_user 
-    @text_post = TextPost.new(text_post_params)
+    @text_post = TextPost.new (text_post_params)
+    @text_post.user = current_user
     if @text_post.save
-      redirect_to text_posts_path
-    else
-      @errors = @text_post.errors
+    redirect_to text_posts_path
+    else @errors = @text_post.errors
       render :new
     end
   end
@@ -39,8 +38,10 @@ class TextPostsController < ApplicationController
 
   def destroy
     if current_user == @text_post.user
-    @text_post.destroy
-    else redirect_to text_posts_path, error: "You don't have permission"
+     @text_post.destroy
+     redirect_to text_posts_path, notice: "Successfully deleted text"
+    else
+     redirect_to text_posts_path, error: "You don't have permission"
     end
   end
 

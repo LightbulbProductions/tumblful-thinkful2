@@ -10,6 +10,7 @@ class TextPostsController < ApplicationController
   end
 
   def create
+    @text_post.user = current_user 
     @text_post = TextPost.new(text_post_params)
     if @text_post.save
       redirect_to text_posts_path

@@ -10,12 +10,12 @@ Tumblful::Application.routes.draw do
   devise_for :users
 
   authenticated :user do
-    resources :follows, :except => [:new, :edit, :show, :update, :delete]
+    resources :follows, :except => [:new, :edit, :show, :update, :destroy]
     root :to => 'follows#index', :as => :user_root
   end
 
   resources :image_links, controller: 'image_links'
-  resources :text_posts
+  resources :text_posts, controller: 'text_posts'
   resources :likes, :only => [:create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

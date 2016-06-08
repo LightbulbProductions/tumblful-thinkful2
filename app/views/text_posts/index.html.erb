@@ -8,7 +8,8 @@
     <%= form_tag do %>
     <%= link_to "New Text Post", new_text_post_path %>
     <%= link_to "Edit", edit_text_post_path(text_post) %>
-    <%= link_to "Delete", text_post_path(text_post.id), :method => :delete %>
+    <%= link_to 'Delete', text_post_path(text_post), :method => :delete,
+      data: {:confirm => 'Are you sure?'} %>
     <% end %>
     <span class='likes pull-left'>
       <%= text_post.likes.count %> likes

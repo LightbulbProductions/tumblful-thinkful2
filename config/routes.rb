@@ -8,14 +8,14 @@ Tumblful::Application.routes.draw do
   mount Forem::Engine, :at => '/forums'
 
   devise_for :users
-  
+
   authenticated :user do
-    resources :follows, :except => [:new, :edit, :show, :update, :delete]
+    resources :follows, :except => [:new, :edit, :show, :update, :destroy]
     root :to => 'follows#index', :as => :user_root
   end
-  
-  resources :image_links, controller: 'image_links' 
-  resources :text_posts
+
+  resources :image_links, controller: 'image_links'
+  resources :text_posts, controller: 'text_posts'
   resources :likes, :only => [:create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -24,6 +24,7 @@ Tumblful::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root :to => 'home#index'
 end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -73,4 +74,3 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-

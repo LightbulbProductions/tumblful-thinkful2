@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510163848) do
+ActiveRecord::Schema.define(version: 20160607183132) do
 
   create_table "article_links", force: true do |t|
     t.text     "title"
@@ -148,7 +148,11 @@ ActiveRecord::Schema.define(version: 20160510163848) do
     t.text     "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "blog"
+    t.integer  "user_id"
   end
+
+  add_index "text_posts", ["user_id"], name: "index_text_posts_on_user_id"
 
   create_table "tweets", force: true do |t|
     t.integer  "user_id"

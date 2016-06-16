@@ -4,7 +4,7 @@ require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(:default, Rails.env)
+Bundler.require(*Rails.groups)
 
 module Tumblful
   class Application < Rails::Application
@@ -19,11 +19,5 @@ module Tumblful
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
-    # By default, Rails wraps form fields with a div.field_with_errors. This messes with the DOM
-    # heirarchy so let's remove it: http://bit.ly/1aMUIu2
-    config.action_view.field_error_proc = Proc.new { |html_tag, instance|
-      "#{html_tag}".html_safe
-    }
   end
 end

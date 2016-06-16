@@ -1,30 +1,20 @@
-Tumblful::Application.routes.draw do
-
-  # This line mounts Forem's routes at /forums by default.
-  # This means, any requests to the /forums URL of your application will go to Forem::ForumsController#index.
-  # If you would like to change where this extension is mounted, simply change the :at option to something different.
-  #
-  # We ask that you don't use the :as option here, as Forem relies on it being the default of "forem"
-  mount Forem::Engine, :at => '/forums'
-
-  devise_for :users
-
-  authenticated :user do
-    resources :follows, :except => [:new, :edit, :show, :update, :delete]
-    root :to => 'follows#index', :as => :user_root
-  end
-
-  resources :image_links, controller: 'image_links'
-  resources :text_posts
-  resources :likes, :only => [:create]
+Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  devise_for :users
 
+   authenticated :user do
+     resources :follows, :except => [:new, :edit, :show, :update, :destroy]
+     root :to => 'follows#index', :as => :user_root
+   end
 
+   resources :image_links, controller: 'image_links'
+   resources :text_posts, controller: 'text_posts'
+ resources :likes, :only => [:create]
   # You can have the root of your site routed with "root"
+  # root 'welcome#index'
   root :to => 'home#index'
-end
-
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -74,3 +64,4 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  

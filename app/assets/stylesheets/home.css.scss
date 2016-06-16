@@ -14,5 +14,12 @@ body {
 	background-image: -webkit-linear-gradient(top, $lightgrey  42%, $midgrey 100%);
 	background-image: -moz-linear-gradient(top, $lightgrey  42%, $midgrey 100%);
 	background-attachment:fixed;
-	
+
+}
+
+div.home-signup {
+  margin: auto;
+  width: 400px;
+  border: none;
+  
 }

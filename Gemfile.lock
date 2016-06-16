@@ -1,35 +1,3 @@
-GIT
-  remote: git://github.com/radar/forem-bootstrap.git
-  revision: 10be50afc1d0a22af1306076e41624c55fc585be
-  specs:
-    forem-bootstrap (0.0.1)
-      bootstrap-sass (~> 3.1)
-
-GIT
-  remote: git://github.com/radar/forem-redcarpet.git
-  revision: c53be9a5c3e97d65546f3f56b53f82669f3a5af5
-  specs:
-    forem-redcarpet (1.0.2)
-      nokogiri
-      pygments.rb (= 0.5.4)
-      redcarpet (= 3.0.0)
-
-GIT
-  remote: git://github.com/radar/forem.git
-  revision: fb37858a51cfc8fe2ccd113e61af42546091fd27
-  branch: rails4
-  specs:
-    forem (1.0.0.beta1)
-      cancancan (~> 1.7)
-      decorators (~> 1.0.2)
-      friendly_id (~> 5.0.0)
-      gemoji (= 2.1.0)
-      rails (~> 4.0, != 4.2.3, != 4.2.2, != 4.2.1, != 4.2.0)
-      sanitize (= 2.0.6)
-      select2-rails (~> 3.5.4)
-      simple_form (~> 3.0)
-      workflow (= 1.0.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -65,14 +33,8 @@ GEM
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
       multi_json (>= 1.0.0)
-    autoprefixer-rails (6.3.6)
-      execjs
     bcrypt (3.1.11)
-    bootstrap-sass (3.3.5)
-      autoprefixer-rails (>= 5.0.0.1)
-      sass (>= 3.2.19)
     builder (3.2.2)
-    cancancan (1.13.1)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -80,9 +42,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    decorators (1.0.5)
-      railties (>= 3.0.19)
-    devise (4.1.0)
+    devise (4.1.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0, < 5.1)
@@ -90,7 +50,7 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
-    execjs (2.6.0)
+    execjs (2.7.0)
     extlib (0.9.16)
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
@@ -100,9 +60,6 @@ GEM
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     ffaker (2.2.0)
-    friendly_id (5.0.5)
-      activerecord (>= 4.0.0)
-    gemoji (2.1.0)
     google-api-client (0.8.6)
       activesupport (>= 3.2)
       addressable (~> 2.3)
@@ -142,21 +99,14 @@ GEM
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     memoist (0.14.0)
-    mime-types (3.0)
+    mime-types (3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2016.0221)
-    mini_portile2 (2.0.0)
-    minitest (5.8.4)
-    multi_json (1.12.0)
+    mime-types-data (3.2016.0521)
+    minitest (5.9.0)
+    multi_json (1.12.1)
     multipart-post (2.0.0)
-    nokogiri (1.6.7.2)
-      mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
     os (0.9.6)
-    posix-spawn (0.3.11)
-    pygments.rb (0.5.4)
-      posix-spawn (~> 0.3.6)
-      yajl-ruby (~> 1.1.0)
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -175,10 +125,9 @@ GEM
       activesupport (= 4.1.7)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (11.1.2)
+    rake (11.2.2)
     rdoc (4.2.2)
       json (~> 1.4)
-    redcarpet (3.0.0)
     ref (2.0.0)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
@@ -198,8 +147,6 @@ GEM
       rspec-core (~> 2.99.0)
       rspec-expectations (~> 2.99.0)
       rspec-mocks (~> 2.99.0)
-    sanitize (2.0.6)
-      nokogiri (>= 1.4.4)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -209,8 +156,6 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    select2-rails (3.5.10)
-      thor (~> 0.14)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
     signet (0.7.2)
@@ -245,9 +190,6 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.6)
       rack (>= 1.0)
-    will_paginate (3.1.0)
-    workflow (1.0.0)
-    yajl-ruby (1.1.0)
     yourub (2.0.3)
       google-api-client (~> 0.7, < 0.9)
 
@@ -259,9 +201,6 @@ DEPENDENCIES
   devise
   factory_girl_rails
   ffaker
-  forem!
-  forem-bootstrap!
-  forem-redcarpet!
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.1.7)
@@ -269,11 +208,11 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   shoulda-matchers
+  simple_form
   sqlite3
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
-  will_paginate
   yourub
 
 BUNDLED WITH

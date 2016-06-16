@@ -6,11 +6,13 @@ ruby '2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -34,17 +36,15 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-# Forem for forum
-gem 'forem', github: "radar/forem", branch: "rails4"
-gem 'forem-bootstrap', github: "radar/forem-bootstrap"
-gem 'forem-redcarpet', github: "radar/forem-redcarpet"
-gem 'will_paginate'
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 # Youtube search
 gem 'yourub'
+gem 'simple_form'
 # Use Devise for authentication: https://github.com/plataformatec/devise#getting-started
 gem 'devise'
+
 
 group :development, :test do
   # Use RSpec for testing: https://github.com/rspec/rspec-rails

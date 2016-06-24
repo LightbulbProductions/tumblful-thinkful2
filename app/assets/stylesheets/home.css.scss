@@ -13,8 +13,16 @@ $cpad: 20px;		/* Variables are not limited to colors, you can use it to store va
 
 
 body {
+
 	background-image: -webkit-linear-gradient(top, $lightgrey  42%, $midgrey 100%);
 	background-image: -moz-linear-gradient(top, $lightgrey  42%, $midgrey 100%);
 	background-attachment:fixed;
+
+}
+div .home-layout {
+  margin: auto;
+  border: 50%;
+  text-align: center;
+  button: small, dark-gray;
 
 }

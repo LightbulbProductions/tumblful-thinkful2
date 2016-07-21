@@ -11,7 +11,7 @@ gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-
+#gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -26,6 +26,8 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+# Use Nokogiri for searching ease
+gem 'nokogiri'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -35,9 +37,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 # Forem for forum
-gem 'forem', github: "radar/forem", branch: "rails4"
-gem 'forem-bootstrap', github: "radar/forem-bootstrap"
-gem 'forem-redcarpet', github: "radar/forem-redcarpet"
+#gem 'forem', github: "radar/forem", branch: "rails4"
+#gem 'forem-bootstrap', github: "radar/forem-bootstrap"
+#gem 'forem-redcarpet', github: "radar/forem-redcarpet"
 gem 'will_paginate'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
